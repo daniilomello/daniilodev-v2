@@ -6,6 +6,7 @@ import { MainSection } from '../components/main-section.component';
 import { ExperiencesSection } from '../components/experiences-section.component';
 import { SeparatorItem } from '../components/seperator.component';
 import { ProjectsSection } from '../components/projects-section.component';
+import { ArticlesSection } from '../components/articles-section.components';
 
 const Home: NextPage = () => {
   return (
@@ -18,6 +19,8 @@ const Home: NextPage = () => {
         <ExperiencesSection />
         <SeparatorItem />
         <ProjectsSection />
+        <SeparatorItem />
+        <ArticlesSection />
       </MainSection>
     </>
   );
