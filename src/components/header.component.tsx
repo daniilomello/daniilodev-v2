@@ -12,7 +12,11 @@ import { RiGitRepositoryLine, RiHome2Line, RiPencilLine } from 'react-icons/ri';
 export function Header() {
   return (
     <>
-      <Box as="header" pb="260px" bgGradient="linear(to-l, #FFAAEB, #C6C7FF)">
+      <Box
+        as="header"
+        pb={['90px', '260px']}
+        bgGradient="linear(to-l, #FFAAEB, #C6C7FF)"
+      >
         <Container
           as="nav"
           display="flex"

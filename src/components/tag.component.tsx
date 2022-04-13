@@ -15,6 +15,7 @@ export function TagItem({ name }: TagItemProps) {
       borderColor="pink.200"
       borderRadius="12px"
       fontSize="12px"
+      mb={['12px', '0']}
     >
       {name}
     </Box>

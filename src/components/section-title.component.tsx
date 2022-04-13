@@ -9,8 +9,8 @@ interface SectionTitleProps {
 
 export function SectionTitle({ title, link }: SectionTitleProps) {
   return (
-    <HStack justifyContent="space-between">
-      <Heading as="h3" fontSize="24px" mb="32px">
+    <HStack justifyContent="space-between" alignItems="center" mb="32px">
+      <Heading as="h3" fontSize="24px">
         {title}
       </Heading>
 

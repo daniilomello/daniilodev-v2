@@ -1,4 +1,4 @@
-import { HStack } from '@chakra-ui/react';
+import { Stack } from '@chakra-ui/react';
 import { ArticleItem } from './article-item.component';
 import { SectionTitle } from './section-title.component';
 
@@ -6,7 +6,7 @@ export function ArticlesSection() {
   return (
     <>
       <SectionTitle title="Artigos ✍" link="/blog" />
-      <HStack>
+      <Stack direction={['column', 'row']}>
         <ArticleItem
           coverImage="https://picsum.photos/500/500"
           date="20 de abril de 2022"
@@ -24,7 +24,7 @@ export function ArticlesSection() {
           cta="Veja como"
           postLink="/posts"
         />
-      </HStack>
+      </Stack>
     </>
   );
 }

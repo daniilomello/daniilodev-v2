@@ -28,7 +28,7 @@ export function ArticleItem({
   postLink,
 }: ArticleItemProps) {
   return (
-    <Box p="21px" maxWidth="50%">
+    <Box p={['4px', '21px']} maxWidth={['100%', '50%']}>
       <Link href={postLink} passHref={true}>
         <Box as="a">
           <Image

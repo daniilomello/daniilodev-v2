@@ -13,12 +13,11 @@ export function MainSection({ children }: MainSectionProps) {
       border="1px"
       borderColor="blue.800"
       mx="auto"
-      maxWidth="768px"
-      minHeight="600px"
-      p="42px"
+      maxWidth={['95%', '768px']}
+      p={['14px', '42px']}
       borderRadius="24px"
       position="relative"
-      top="-140px"
+      top={['-50px', '-140px']}
     >
       {children}
     </Container>

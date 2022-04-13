@@ -1,4 +1,4 @@
-import { Box, HStack, Avatar as ChakraAvatar, Heading } from '@chakra-ui/react';
+import { Box, Stack, Avatar as ChakraAvatar, Heading } from '@chakra-ui/react';
 import { TagItem } from './tag.component';
 
 export function AvatarItem() {
@@ -18,13 +18,13 @@ export function AvatarItem() {
         Desenvolvedor Full Stack
       </Heading>
 
-      <HStack mt="12px">
+      <Stack mt="12px" direction="row" wrap="wrap" alignItems="baseline">
         <TagItem name="Typescript" />
         <TagItem name="React" />
         <TagItem name="Node" />
         <TagItem name="WordPress" />
         <TagItem name="Figma" />
-      </HStack>
+      </Stack>
     </Box>
   );
 }

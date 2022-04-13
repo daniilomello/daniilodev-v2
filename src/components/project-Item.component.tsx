@@ -1,4 +1,4 @@
-import { Heading, HStack, Box, Text } from '@chakra-ui/react';
+import { Heading, HStack, Stack, Box, Text } from '@chakra-ui/react';
 import { ProjectIconLink } from './project-icon-link.component';
 
 interface ProjectItemProps {
@@ -34,9 +34,13 @@ export function ProjectItem({
       border="1px"
       borderColor="blue.800"
       borderRadius="12px"
-      maxWidth="50%"
+      maxWidth={['100%', '50%']}
     >
-      <HStack justifyContent="space-between" mb="24px">
+      <Stack
+        justifyContent="space-between"
+        mb="24px"
+        direction={['column', 'row']}
+      >
         <Heading as="h3" fontSize="18px">
           {name}
         </Heading>
@@ -71,7 +75,7 @@ export function ProjectItem({
             />
           ) : null}
         </HStack>
-      </HStack>
+      </Stack>
       <Text mb="24px" fontSize="18px">
         {description}
       </Text>
