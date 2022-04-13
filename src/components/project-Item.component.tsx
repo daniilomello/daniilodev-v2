@@ -1,17 +1,33 @@
-import Link from 'next/link';
-import {
-  Heading,
-  HStack,
-  Link as ChakraLink,
-  VStack,
-  Box,
-  Tooltip,
-  IconButton,
-  Text,
-} from '@chakra-ui/react';
-import { RiShareBoxLine } from 'react-icons/ri';
+import { Heading, HStack, Box, Text } from '@chakra-ui/react';
+import { ProjectIconLink } from './project-icon-link.component';
 
-export function ProjectItem() {
+interface ProjectItemProps {
+  name: string;
+  description: string;
+  tags: string;
+  live?: string;
+  github?: string;
+  figma?: string;
+  loom?: string;
+  asGithub?: boolean;
+  asFigma?: boolean;
+  asLive?: boolean;
+  asLoom?: boolean;
+}
+
+export function ProjectItem({
+  name,
+  description,
+  tags,
+  live,
+  github,
+  loom,
+  figma,
+  asLive = false,
+  asGithub = false,
+  asLoom = false,
+  asFigma = false,
+}: ProjectItemProps) {
   return (
     <Box
       p="24px"
@@ -22,45 +38,45 @@ export function ProjectItem() {
     >
       <HStack justifyContent="space-between" mb="24px">
         <Heading as="h3" fontSize="18px">
-          Ignews
+          {name}
         </Heading>
 
-        <VStack>
-          <Link href="/" passHref={true}>
-            <ChakraLink>
-              <Tooltip
-                label="Acessar projeto"
-                aria-label="Acessar projeto tooltip"
-                bg="blue.900"
-                color="blue.50"
-                borderRadius="10px"
-                px="18px"
-                py="4px"
-                fontWeight="bold"
-              >
-                <IconButton
-                  aria-label="Home Icon"
-                  variant="unstyled"
-                  bg="transparent"
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  color="blue.50"
-                  icon={<RiShareBoxLine size="28px" />}
-                  _hover={{
-                    bgColor: 'blackAlpha.100',
-                  }}
-                />
-              </Tooltip>
-            </ChakraLink>
-          </Link>
-        </VStack>
+        <HStack>
+          {asGithub ? (
+            <ProjectIconLink
+              iconLink={github}
+              labelName="Repositório"
+              asGithub={asGithub}
+            />
+          ) : null}
+          {asFigma ? (
+            <ProjectIconLink
+              iconLink={figma}
+              labelName="Layout"
+              asFigma={asFigma}
+            />
+          ) : null}
+          {asLoom ? (
+            <ProjectIconLink
+              iconLink={loom}
+              labelName="Apresentação"
+              asLoom={asLoom}
+            />
+          ) : null}
+          {asLive ? (
+            <ProjectIconLink
+              iconLink={live}
+              labelName="Acessar"
+              asLive={asLive}
+            />
+          ) : null}
+        </HStack>
       </HStack>
       <Text mb="24px" fontSize="18px">
-        Web app para exibir notícias apenas para assinantes mensais.
+        {description}
       </Text>
       <Text as="small" fontSize="12px">
-        React - Stripe - Prismic - FaunaDB
+        {tags}
       </Text>
     </Box>
   );
