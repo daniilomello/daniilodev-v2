@@ -1,6 +1,6 @@
 import { Box, HStack, Avatar as ChakraAvatar, Heading } from '@chakra-ui/react';
 
-export function Avatar() {
+export function AvatarItem() {
   return (
     <Box>
       <ChakraAvatar
