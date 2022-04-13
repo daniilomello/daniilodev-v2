@@ -33,6 +33,7 @@ export function Header() {
                   borderRadius="10px"
                   px="18px"
                   py="4px"
+                  fontWeight="bold"
                 >
                   <IconButton
                     aria-label="Home Icon"
@@ -42,7 +43,7 @@ export function Header() {
                     alignItems="center"
                     justifyContent="center"
                     color="blue.900"
-                    icon={<RiHome2Line size="22px" />}
+                    icon={<RiHome2Line size="28px" />}
                     _hover={{
                       bgColor: 'blackAlpha.100',
                     }}
@@ -61,6 +62,7 @@ export function Header() {
                   borderRadius="10px"
                   px="18px"
                   py="4px"
+                  fontWeight="bold"
                 >
                   <IconButton
                     aria-label="Blog"
@@ -70,7 +72,7 @@ export function Header() {
                     alignItems="center"
                     justifyContent="center"
                     color="blue.900"
-                    icon={<RiPencilLine size="22px" />}
+                    icon={<RiPencilLine size="28px" />}
                     _hover={{
                       bgColor: 'blackAlpha.100',
                     }}
@@ -89,6 +91,7 @@ export function Header() {
                   borderRadius="10px"
                   px="18px"
                   py="4px"
+                  fontWeight="bold"
                 >
                   <IconButton
                     aria-label="Projetos"
@@ -98,7 +101,7 @@ export function Header() {
                     alignItems="center"
                     justifyContent="center"
                     color="blue.900"
-                    icon={<RiGitRepositoryLine size="22px" />}
+                    icon={<RiGitRepositoryLine size="28px" />}
                     _hover={{
                       bgColor: 'blackAlpha.100',
                     }}

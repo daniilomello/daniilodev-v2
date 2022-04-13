@@ -29,8 +29,8 @@ export const theme = extendTheme({
     },
   },
   fonts: {
-    heading: 'Roboto',
-    body: 'Roboto',
+    heading: 'Anek Tamil',
+    body: 'Anek Tamil',
   },
   styles: {
     global: {
