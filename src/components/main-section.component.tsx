@@ -11,7 +11,7 @@ export function MainSection({ children }: MainSectionProps) {
       as="main"
       bg="blue.900"
       border="1px"
-      borderColor="blue.700"
+      borderColor="blue.800"
       mx="auto"
       maxWidth="768px"
       minHeight="600px"
