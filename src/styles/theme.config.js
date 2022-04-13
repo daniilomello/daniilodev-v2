@@ -38,6 +38,15 @@ export const theme = extendTheme({
         bg: 'blue.900',
         color: 'blue.50',
       },
+      a: {
+        color: 'blue.50',
+        transition: 'all 0.3s ease',
+        _hover: {
+          color: 'pink.200',
+          textDecoration: 'unset !important',
+          transition: 'all 0.3s ease',
+        },
+      },
     },
   },
 });

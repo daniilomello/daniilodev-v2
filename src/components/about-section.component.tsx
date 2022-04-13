@@ -1,5 +1,6 @@
 import { Box, Link as ChakraLink, Heading, Text } from '@chakra-ui/react';
 import Link from 'next/link';
+import { SocialIcons } from './social-icons.component';
 
 export function AboutSection() {
   return (
@@ -59,6 +60,8 @@ export function AboutSection() {
         </Link>
         .
       </Text>
+
+      <SocialIcons />
     </Box>
   );
 }
