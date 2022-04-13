@@ -9,7 +9,7 @@ export function AboutSection() {
       </Heading>
       <Text fontSize="18px">
         Desenvolvedor Front-end focado em React, com pouco conhecimento em
-        Back-end com Node. Atualmente trabalhando na
+        Back-end com Node. Atualmente trabalhando na &nbsp;
         <Link
           href="https://agenciar8.com.br/?origin=daniilo.dev"
           passHref={true}
@@ -24,7 +24,7 @@ export function AboutSection() {
             @agenciaR8
           </ChakraLink>
         </Link>
-        , e desenvolvendo sistema para
+        , e desenvolvendo sistema para &nbsp;
         <Link
           href="https://gabaritalab.com.br/?origin=daniilo.dev"
           passHref={true}
@@ -42,7 +42,7 @@ export function AboutSection() {
         .
       </Text>
       <Text fontSize="18px" mt="24px">
-        Estudando Node e Typescript na
+        Estudando Node e Typescript na &nbsp;
         <Link
           href="https://rocketseat.com.br/?origin=daniilo.dev"
           passHref={true}
