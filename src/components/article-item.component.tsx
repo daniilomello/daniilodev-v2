@@ -10,32 +10,54 @@ import {
 } from '@chakra-ui/react';
 import { RiArrowRightUpLine } from 'react-icons/ri';
 
-export function ArticleItem() {
+interface ArticleItemProps {
+  coverImage: string;
+  date: string;
+  readTime: number;
+  title: string;
+  cta: string;
+  postLink: string;
+}
+
+export function ArticleItem({
+  coverImage,
+  date,
+  title,
+  readTime,
+  cta,
+  postLink,
+}: ArticleItemProps) {
   return (
     <Box p="21px" maxWidth="50%">
-      <Image
-        src="https://picsum.photos/500/500"
-        boxSize="100%"
-        height="155px"
-        objectFit="cover"
-        alt="Blog post image"
-        borderRadius="12px"
-      />
+      <Link href={postLink} passHref={true}>
+        <Box as="a">
+          <Image
+            src={coverImage}
+            boxSize="100%"
+            height="155px"
+            objectFit="cover"
+            alt={title}
+            borderRadius="12px"
+          />
+        </Box>
+      </Link>
 
       <HStack justifyContent="space-between" my="12px">
         <Text as="small" fontSize="12px">
-          20 de abril de 2022
+          {date}
         </Text>
         <Text as="small" fontSize="12px">
-          4 min
+          {readTime} min
         </Text>
       </HStack>
 
       <Heading as="h3" mb="24px" fontSize="18px">
-        Criando uma landing page com NextJS
+        <Link href={postLink} passHref={true}>
+          {title}
+        </Link>
       </Heading>
 
-      <Link href="/projects" passHref={true}>
+      <Link href={postLink} passHref={true}>
         <ChakraLink>
           <Button
             rightIcon={<RiArrowRightUpLine size="24px" />}
@@ -43,7 +65,7 @@ export function ArticleItem() {
             fontWeight="normal"
             display="flex"
           >
-            Saiba mais
+            {cta}
           </Button>
         </ChakraLink>
       </Link>
