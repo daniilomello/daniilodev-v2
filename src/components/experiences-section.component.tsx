@@ -1,4 +1,5 @@
 import { Box, Heading, HStack, VStack, Text, Image } from '@chakra-ui/react';
+import { CompanyItem } from './company-item.component';
 export function ExperiencesSection() {
   return (
     <Box>
@@ -7,62 +8,23 @@ export function ExperiencesSection() {
       </Heading>
 
       <VStack alignItems="start" spacing="24px">
-        <HStack alignItems="center" spacing="12px">
-          <Box>
-            <Image
-              src="/images/gabarita.png"
-              boxSize="49px"
-              objectFit="cover"
-              alt="Logo Gabarita"
-            />
-          </Box>
-          <Box>
-            <Heading as="h5" fontSize="18px" fontWeight="bold">
-              Desenvolvedor Front-end
-            </Heading>
-            <Text as="h6" fontSize="16px" color="blue.600">
-              Gabaritalab - 2021 - Atualmente
-            </Text>
-          </Box>
-        </HStack>
+        <CompanyItem
+          companyImage="/images/gabarita.png"
+          role="Desenvolvedor Front-end"
+          companyName="Gabaritalab - 2021 - Atualmente"
+        />
 
-        <HStack alignItems="center" spacing="12px">
-          <Box>
-            <Image
-              src="/images/r8.png"
-              boxSize="49px"
-              objectFit="cover"
-              alt="Logo Agência R8"
-            />
-          </Box>
-          <Box>
-            <Heading as="h5" fontSize="18px" fontWeight="bold">
-              Desenvolvedor Full Stack
-            </Heading>
-            <Text as="h6" fontSize="16px" color="blue.600">
-              R8 - 2019 - Atualmente
-            </Text>
-          </Box>
-        </HStack>
+        <CompanyItem
+          companyImage="/images/r8.png"
+          role="Desenvolvedor Full Stack"
+          companyName="R8 - 2019 - Atualmente"
+        />
 
-        <HStack alignItems="center" spacing="12px">
-          <Box>
-            <Image
-              src="/images/tobe.png"
-              boxSize="49px"
-              objectFit="cover"
-              alt="Logo To be Comunicação"
-            />
-          </Box>
-          <Box>
-            <Heading as="h5" fontSize="18px" fontWeight="bold">
-              Desenvolvedor Front-end
-            </Heading>
-            <Text as="h6" fontSize="16px" color="blue.600">
-              To Be - 2016 - 2018
-            </Text>
-          </Box>
-        </HStack>
+        <CompanyItem
+          companyImage="/images/tobe.png"
+          role="Desenvolvedor Front-end"
+          companyName="To Be - 2016 - 2018"
+        />
       </VStack>
     </Box>
   );

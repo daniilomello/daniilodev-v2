@@ -3,15 +3,12 @@ import {
   Heading,
   HStack,
   Link as ChakraLink,
-  VStack,
   Box,
-  Tooltip,
-  IconButton,
   Text,
   Image,
   Button,
 } from '@chakra-ui/react';
-import { RiArrowRightUpLine, RiShareBoxLine } from 'react-icons/ri';
+import { RiArrowRightUpLine } from 'react-icons/ri';
 
 export function ArticleItem() {
   return (

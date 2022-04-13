@@ -1,30 +1,11 @@
-import Link from 'next/link';
-import { Heading, HStack, Link as ChakraLink, Button } from '@chakra-ui/react';
-import { RiArrowRightUpLine } from 'react-icons/ri';
+import { HStack } from '@chakra-ui/react';
 import { ArticleItem } from './article-item.component';
+import { SectionTitle } from './section-title.component';
 
 export function ArticlesSection() {
   return (
     <>
-      <HStack justifyContent="space-between">
-        <Heading as="h3" fontSize="24px" mb="32px">
-          Artigos ✍
-        </Heading>
-
-        <Link href="/projects" passHref={true}>
-          <ChakraLink>
-            <Button
-              rightIcon={<RiArrowRightUpLine size="24px" />}
-              variant="unstyled"
-              fontWeight="normal"
-              display="flex"
-            >
-              Ver todos
-            </Button>
-          </ChakraLink>
-        </Link>
-      </HStack>
-
+      <SectionTitle title="Artigos ✍" link="/blog" />
       <HStack>
         <ArticleItem />
         <ArticleItem />
