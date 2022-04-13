@@ -5,6 +5,7 @@ import { AvatarSection } from '../components/avatar-section.component';
 import { MainSection } from '../components/main-section.component';
 import { ExperiencesSection } from '../components/experiences-section.component';
 import { SeparatorItem } from '../components/seperator.component';
+import { ProjectsSection } from '../components/projects-section.component';
 
 const Home: NextPage = () => {
   return (
@@ -15,6 +16,8 @@ const Home: NextPage = () => {
         <AboutSection />
         <SeparatorItem />
         <ExperiencesSection />
+        <SeparatorItem />
+        <ProjectsSection />
       </MainSection>
     </>
   );
