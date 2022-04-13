@@ -41,7 +41,7 @@ export function ProjectItem({
           {name}
         </Heading>
 
-        <HStack>
+        <HStack spacing="2px">
           {asGithub ? (
             <ProjectIconLink
               iconLink={github}

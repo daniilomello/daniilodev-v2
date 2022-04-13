@@ -15,6 +15,8 @@ export function ProjectsSection() {
           asLive={true}
           figma="/"
           asFigma={true}
+          loom="/"
+          asLoom={true}
         />
         <ProjectItem
           name="Ignews"

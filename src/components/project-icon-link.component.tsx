@@ -13,8 +13,6 @@ interface ProjectIconLinkProps {
   asLoom?: boolean;
 }
 
-// <RiShareBoxLine size="28px" />
-
 export function ProjectIconLink({
   labelName,
   iconLink,
@@ -25,22 +23,22 @@ export function ProjectIconLink({
 }: ProjectIconLinkProps) {
   const renderIcon = () => {
     if (asLive) {
-      return <RiShareBoxLine size="28px" />;
+      return <RiShareBoxLine size="20px" />;
     }
 
     if (asGithub) {
-      return <RiGithubLine size="28px" />;
+      return <RiGithubLine size="20px" />;
     }
 
     if (asFigma) {
-      return <FaFigma size="28px" />;
+      return <FaFigma size="20px" />;
     }
 
     if (asLoom) {
-      return <SiLoom size="28px" />;
+      return <SiLoom size="20px" />;
     }
 
-    return <RiShareBoxLine size="28px" />;
+    return <RiShareBoxLine size="20px" />;
   };
 
   return (
@@ -65,6 +63,7 @@ export function ProjectIconLink({
             justifyContent="center"
             color="blue.50"
             icon={renderIcon()}
+            size="xs"
             _hover={{
               bgColor: 'blackAlpha.100',
             }}
