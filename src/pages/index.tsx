@@ -1,20 +1,10 @@
 import type { NextPage } from 'next';
-import {
-  Box,
-  IconButton,
-  Container,
-  Link as ChakraLink,
-  Tooltip,
-  HStack,
-  Heading,
-  Text,
-} from '@chakra-ui/react';
-import Link from 'next/link';
-import { RiErrorWarningLine } from 'react-icons/ri';
 import { Header } from '../components/header.component';
 import { AboutSection } from '../components/about-section.component';
 import { AvatarSection } from '../components/avatar-section.component';
 import { MainSection } from '../components/main-section.component';
+import { ExperiencesSection } from '../components/experiences-section.component';
+import { SeparatorItem } from '../components/seperator.component';
 
 const Home: NextPage = () => {
   return (
@@ -23,6 +13,8 @@ const Home: NextPage = () => {
       <MainSection>
         <AvatarSection />
         <AboutSection />
+        <SeparatorItem />
+        <ExperiencesSection />
       </MainSection>
     </>
   );
