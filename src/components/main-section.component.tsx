@@ -17,7 +17,7 @@ export function MainSection({ children }: MainSectionProps) {
       p={['14px', '42px']}
       borderRadius="24px"
       position="relative"
-      top={['-50px', '-140px']}
+      top={['-50px', '-80px']}
     >
       {children}
     </Container>

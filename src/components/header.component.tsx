@@ -14,7 +14,7 @@ export function Header() {
     <>
       <Box
         as="header"
-        pb={['90px', '260px']}
+        pb={['90px', '100px']}
         bgGradient="linear(to-l, #FFAAEB, #C6C7FF)"
       >
         <Container
@@ -32,8 +32,8 @@ export function Header() {
                 <Tooltip
                   label="Home"
                   aria-label="A home tooltip"
-                  bg="blue.900"
-                  color="blue.50"
+                  bg="blue.50"
+                  color="blue.900"
                   borderRadius="10px"
                   px="18px"
                   py="4px"
@@ -61,8 +61,8 @@ export function Header() {
                 <Tooltip
                   label="Blog"
                   aria-label="Blog"
-                  bg="blue.900"
-                  color="blue.50"
+                  bg="blue.50"
+                  color="blue.900"
                   borderRadius="10px"
                   px="18px"
                   py="4px"
@@ -90,8 +90,8 @@ export function Header() {
                 <Tooltip
                   label="Projetos"
                   aria-label="Projetos"
-                  bg="blue.900"
-                  color="blue.50"
+                  bg="blue.50"
+                  color="blue.900"
                   borderRadius="10px"
                   px="18px"
                   py="4px"

@@ -16,7 +16,7 @@ export default function ProjectsPageList() {
         <Thead>
           <Tr>
             <Th>Nome</Th>
-            <Th>Stack</Th>
+            <Th display={['none', 'block']}>Stack</Th>
             <Th>Link</Th>
           </Tr>
         </Thead>

@@ -30,7 +30,7 @@ export function ProjectsPageItem({
     <>
       <Tr>
         <Td>{name}</Td>
-        <Td>{tags}</Td>
+        <Td display={['none', 'block']}>{tags}</Td>
         <Td>
           <HStack spacing="2px">
             {asGithub ? (

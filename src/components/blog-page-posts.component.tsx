@@ -15,7 +15,7 @@ interface ArticlesPostsProps {
 export function BlogPagePosts({ posts }: ArticlesPostsProps) {
   return (
     <>
-      <SimpleGrid columns={[1, null, 2]} minChildWidth="49%" spacing="5px">
+      <SimpleGrid minChildWidth={['100%', '45%']} spacing="5px">
         {posts.map((post) => (
           <ArticleItem
             key={post.id}
