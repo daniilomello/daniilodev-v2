@@ -1,4 +1,4 @@
-import { HStack, Tr, Td } from '@chakra-ui/react';
+import { HStack, Tr, Td, Text } from '@chakra-ui/react';
 import { ProjectIconLink } from './project-icon-link.component';
 
 interface ProjectItemProps {
@@ -30,7 +30,9 @@ export function ProjectsPageItem({
     <>
       <Tr>
         <Td>{name}</Td>
-        <Td display={['none', 'block']}>{tags}</Td>
+        <Td display={['none', 'block']}>
+          <Text as="small">{tags}</Text>
+        </Td>
         <Td>
           <HStack spacing="2px">
             {asGithub ? (
