@@ -1,15 +1,26 @@
-import {
-  Table,
-  Thead,
-  Tbody,
-  Th,
-  Tr,
-  Td,
-  TableContainer,
-} from '@chakra-ui/react';
+import { Table, Thead, Tbody, Th, Tr, TableContainer } from '@chakra-ui/react';
 import { ProjectsPageItem } from './projects-page-Item.component';
 
-export default function ProjectsPageList() {
+interface ProjectsPageListProps {
+  projectsList: {
+    name: string;
+    tags: string;
+    live?: string;
+    github?: string;
+    figma?: string;
+    loom?: string;
+    asGithub?: boolean;
+    asFigma?: boolean;
+    asLive?: boolean;
+    asLoom?: boolean;
+  }[];
+}
+
+export default function ProjectsPageList({
+  projectsList,
+}: ProjectsPageListProps) {
+  console.log(projectsList);
+
   return (
     <TableContainer>
       <Table variant="unstyled">
@@ -21,25 +32,21 @@ export default function ProjectsPageList() {
           </Tr>
         </Thead>
         <Tbody>
-          <ProjectsPageItem
-            name="Portfólio v2"
-            tags="NextJS - Chakra UI - Prismic"
-            live="/"
-            asLive={true}
-            figma="/"
-            asFigma={true}
-            loom="/"
-            asLoom={true}
-          />
-
-          <ProjectsPageItem
-            name="Ignews"
-            tags="NextJS - Stripe - Prismic - FaunaDB"
-            live="/"
-            asLive={true}
-            github="/"
-            asGithub={true}
-          />
+          {projectsList.map((item) => (
+            <ProjectsPageItem
+              key={item.name}
+              name={item.name}
+              tags={item.tags}
+              live={item.live}
+              github={item.github}
+              figma={item.figma}
+              loom={item.loom}
+              asLive={item.asLive}
+              asGithub={item.asGithub}
+              asFigma={item.asFigma}
+              asLoom={item.asLoom}
+            />
+          ))}
         </Tbody>
       </Table>
     </TableContainer>

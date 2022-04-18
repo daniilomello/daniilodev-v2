@@ -42,7 +42,7 @@ export function ProjectIconLink({
   };
 
   return (
-    <Link href={iconLink ?? '/'} passHref={true}>
+    <Link href={iconLink ? iconLink : '/'} passHref={true}>
       <ChakraLink>
         <Tooltip
           label={labelName}
