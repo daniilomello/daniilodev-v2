@@ -2,6 +2,7 @@ export const projects = [
   {
     name: 'Portfólio v2',
     tags: 'NextJS - Chakra UI - Prismic',
+    description: 'Site pessoal para exibir meus projetos e conteúdos.',
     live: 'https://daniilo.dev/',
     github: 'https://github.com/daniilomello/daniilodev',
     figma: '/',
@@ -14,6 +15,7 @@ export const projects = [
   {
     name: 'Ignews',
     tags: 'NextJS - Stripe - Prismic - FaunaDB',
+    description: 'Web app para exibir notícias apenas para assinantes mensais.',
     live: 'https://ignews.daniilo.dev/',
     github: 'https://github.com/daniilomello/ignews-ts',
     figma: '/',
@@ -26,6 +28,7 @@ export const projects = [
   {
     name: 'Portfólio v1',
     tags: 'ReactJS - Styled Components - MDX',
+    description: 'Site pessoal para exibir meus projetos e conteúdos.',
     live: 'https://daniilo.dev/',
     github: 'https://github.com/daniilomello/daniilomello-website',
     figma: '/',

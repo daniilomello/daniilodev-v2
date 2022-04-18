@@ -19,8 +19,6 @@ interface ProjectsPageListProps {
 export default function ProjectsPageList({
   projectsList,
 }: ProjectsPageListProps) {
-  console.log(projectsList);
-
   return (
     <TableContainer>
       <Table variant="unstyled">

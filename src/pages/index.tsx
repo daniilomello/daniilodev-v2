@@ -10,6 +10,7 @@ import { ProjectsSection } from '../components/projects-section.component';
 import { ArticlesSection } from '../components/articles-section.components';
 import { getPrismicClient } from '../services/prismic.config';
 import { RichText } from 'prismic-dom';
+import { projects } from '../data/projects';
 
 interface Posts {
   id: string;
@@ -22,9 +23,22 @@ interface Posts {
 
 interface HomeProps {
   posts: Posts[];
+  projectsList: {
+    name: string;
+    tags: string;
+    description: string;
+    live?: string;
+    github?: string;
+    figma?: string;
+    loom?: string;
+    asGithub?: boolean;
+    asFigma?: boolean;
+    asLive?: boolean;
+    asLoom?: boolean;
+  }[];
 }
 
-export default function Home({ posts }: HomeProps) {
+export default function Home({ posts, projectsList }: HomeProps) {
   return (
     <>
       <Header />
@@ -34,7 +48,7 @@ export default function Home({ posts }: HomeProps) {
         <SeparatorItem />
         <ExperiencesSection />
         <SeparatorItem />
-        <ProjectsSection />
+        <ProjectsSection projectsList={projectsList} />
         <SeparatorItem />
         <ArticlesSection posts={posts} />
       </MainSection>
@@ -74,6 +88,7 @@ export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       posts,
+      projectsList: projects,
     },
   };
 };
