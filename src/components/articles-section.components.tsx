@@ -2,28 +2,36 @@ import { SimpleGrid } from '@chakra-ui/react';
 import { ArticleItem } from './article-item.component';
 import { SectionTitle } from './section-title.component';
 
-export function ArticlesSection() {
+type Post = {
+  id: string;
+  slug: string;
+  title: string;
+  excerpt: string;
+  updatedAt: string;
+  cover: string;
+};
+
+interface ArticlesPostsProps {
+  posts: Post[];
+}
+
+export function ArticlesSection({ posts }: ArticlesPostsProps) {
   return (
     <>
       <SectionTitle title="Artigos ✍" link="/blog" />
-      <SimpleGrid minChildWidth={['100%', '45%']}>
-        <ArticleItem
-          coverImage="https://picsum.photos/500/500"
-          date="20 de abril de 2022"
-          readTime={4}
-          title="Criando uma landing page com NextJS"
-          cta="Saiba mais"
-          postLink="/posts"
-        />
 
-        <ArticleItem
-          coverImage="https://picsum.photos/500/501"
-          date="20 de abril de 2022"
-          readTime={8}
-          title="Iniciando um projeto do zero usando a CLI do Github"
-          cta="Veja como"
-          postLink="/posts"
-        />
+      <SimpleGrid minChildWidth={['100%', '45%']}>
+        {posts.map((post) => (
+          <ArticleItem
+            key={post.id}
+            coverImage={post.cover}
+            date={post.updatedAt}
+            readTime={4}
+            title={post.title}
+            cta="Saiba mais"
+            postLink={`/blog/${post.slug}`}
+          />
+        ))}
       </SimpleGrid>
     </>
   );

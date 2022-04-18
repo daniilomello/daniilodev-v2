@@ -1,0 +1,26 @@
+.blogPost {
+	margin-top: 50px;
+	h2,
+	h3 {
+		margin: 0 0 0.35em !important;
+		font-weight: 900 !important;
+	}
+
+	h2 {
+		font-size: 34px !important;
+	}
+
+	h3 {
+		font-size: 28px !important;
+	}
+
+	p {
+		margin: 0 0 1.15em !important;
+		font-size: 21px !important;
+		font-weight: 200;
+	}
+
+	p + h2 {
+		margin-top: 1.5em !important;
+	}
+}

@@ -1,4 +1,5 @@
-import type { NextPage } from 'next';
+import Prismic from '@prismicio/client';
+import type { GetStaticProps } from 'next';
 import { Header } from '../components/header.component';
 import { AboutSection } from '../components/about-section.component';
 import { AvatarSection } from '../components/avatar-section.component';
@@ -7,8 +8,23 @@ import { ExperiencesSection } from '../components/experiences-section.component'
 import { SeparatorItem } from '../components/seperator.component';
 import { ProjectsSection } from '../components/projects-section.component';
 import { ArticlesSection } from '../components/articles-section.components';
+import { getPrismicClient } from '../services/prismic.config';
+import { RichText } from 'prismic-dom';
 
-const Home: NextPage = () => {
+interface Posts {
+  id: string;
+  slug: string;
+  title: string;
+  excerpt: string;
+  updatedAt: string;
+  cover: string;
+}
+
+interface HomeProps {
+  posts: Posts[];
+}
+
+export default function Home({ posts }: HomeProps) {
   return (
     <>
       <Header />
@@ -20,10 +36,44 @@ const Home: NextPage = () => {
         <SeparatorItem />
         <ProjectsSection />
         <SeparatorItem />
-        <ArticlesSection />
+        <ArticlesSection posts={posts} />
       </MainSection>
     </>
   );
-};
+}
 
-export default Home;
+export const getStaticProps: GetStaticProps = async () => {
+  const prismic = getPrismicClient();
+
+  const response = await prismic.query(
+    [Prismic.predicates.at('document.type', 'blog')],
+    {
+      fetch: ['publication.title', 'publication.content'],
+      pageSize: 2,
+    }
+  );
+
+  const posts = response.results.map((post: any) => {
+    return {
+      id: post.id,
+      slug: post.uid,
+      title: RichText.asText(post.data.title),
+      excerpt: RichText.asText(post.data.content).slice(0, 175) + '[...]',
+      updatedAt: new Date(post.last_publication_date).toLocaleDateString(
+        'pt-BR',
+        {
+          day: '2-digit',
+          month: 'long',
+          year: 'numeric',
+        }
+      ),
+      cover: post.data.cover.url,
+    };
+  });
+
+  return {
+    props: {
+      posts,
+    },
+  };
+};

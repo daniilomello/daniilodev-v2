@@ -10,7 +10,7 @@ export default function ProjectsPageTitle() {
 
       <Flex direction="column" align="center" mt="24px">
         <Heading>Projetos</Heading>
-        <Text color="blue.400">Coisas que eu criei ou participei :)</Text>
+        <Text color="blue.400">Coisas que eu desenvolvi e participei :)</Text>
       </Flex>
     </Box>
   );
