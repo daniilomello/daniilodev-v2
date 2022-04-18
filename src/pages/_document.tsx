@@ -11,7 +11,7 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@200;400;500;600&display=swap"
             rel="stylesheet"
           />
-          <link rel="shortcut icon" href="favicon.png" type="image/png" />
+          <link rel="icon" type="image/png" href="/favicon.png" />
         </Head>
         <body>
           <Main />
