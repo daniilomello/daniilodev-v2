@@ -52,7 +52,7 @@ export const projects = [
     asLoom: false,
   },
   {
-    name: 'Dogs Social',
+    name: 'Smartbrain',
     tags: 'ReactJS - Express - Claritai API - PostgreSQL - Heroku - Netlify',
     description: 'Web App que identifica pessoas em fotos.',
     live: 'https://smartbrain.daniilo.dev/',
