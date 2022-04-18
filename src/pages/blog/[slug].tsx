@@ -19,7 +19,7 @@ interface Post {
   loom: string;
 }
 
-export default function BlogArticle({ post }: Post) {
+export default function BlogArticle(post: Post) {
   console.log(post);
 
   const router = useRouter();
