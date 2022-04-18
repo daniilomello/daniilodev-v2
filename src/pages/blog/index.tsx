@@ -45,7 +45,7 @@ export default function Blog({ postsPagination }: BlogProps): JSX.Element {
     setNextPage(postsResults.next_page);
     setCurrentPage(postsResults.page);
 
-    const newPosts = postsResults.results.map((post) => {
+    const newPosts = postsResults.results.map((post: any) => {
       return {
         id: post.id,
         slug: post.uid,
