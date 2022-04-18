@@ -19,9 +19,11 @@ interface Post {
   loom: string;
 }
 
-export default function BlogArticle(post: Post) {
-  console.log(post);
+interface Posts {
+  post: Post;
+}
 
+export default function BlogArticle({ post }: Posts) {
   const router = useRouter();
 
   if (router.isFallback) {
@@ -90,10 +92,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const prismic = getPrismicClient();
-  const { slug } = context.params;
-  const response = await prismic.getByUID('blog', String(slug), {});
+  const { slug }: any = context.params;
+  const response: any = await prismic.getByUID('blog', String(slug), {});
 
-  const post = {
+  const myPost = {
     id: response.id,
     slug: response.uid,
     title: RichText.asText(response.data.title),
@@ -111,7 +113,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   };
   return {
     props: {
-      post,
+      post: myPost,
     },
   };
 };
