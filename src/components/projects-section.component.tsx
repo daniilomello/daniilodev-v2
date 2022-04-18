@@ -1,4 +1,4 @@
-import { Stack } from '@chakra-ui/react';
+import { SimpleGrid } from '@chakra-ui/react';
 import { ProjectItem } from './project-Item.component';
 import { SectionTitle } from './section-title.component';
 
@@ -6,9 +6,9 @@ export function ProjectsSection() {
   return (
     <>
       <SectionTitle title="Projetos 🤘" link="/projects" />
-      <Stack direction={['column', 'row']}>
+      <SimpleGrid minChildWidth={['100%', '45%']} spacing="15px">
         <ProjectItem
-          name="Portfólio 2022"
+          name="Portfólio v2"
           description="Site pessoal para exibir meus projetos e conteúdos."
           tags="NextJS - Chakra UI - Prismic"
           live="/"
@@ -27,7 +27,7 @@ export function ProjectsSection() {
           github="/"
           asGithub={true}
         />
-      </Stack>
+      </SimpleGrid>
     </>
   );
 }

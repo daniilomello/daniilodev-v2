@@ -29,13 +29,7 @@ export function ProjectItem({
   asFigma = false,
 }: ProjectItemProps) {
   return (
-    <Box
-      p="24px"
-      border="1px"
-      borderColor="blue.800"
-      borderRadius="12px"
-      maxWidth={['100%', '50%']}
-    >
+    <Box p="24px" border="1px" borderColor="blue.800" borderRadius="12px">
       <Stack
         justifyContent="space-between"
         mb="24px"
