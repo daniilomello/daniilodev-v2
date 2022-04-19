@@ -9,6 +9,7 @@ import { useState } from 'react';
 import { Button, Flex } from '@chakra-ui/react';
 import { MainPagesSection } from '../../components/main-pages-section.component';
 import { HeaderPages } from '../../components/header-pages.component';
+import Head from 'next/head';
 
 interface Posts {
   id: string;
@@ -68,6 +69,9 @@ export default function Blog({ postsPagination }: BlogProps): JSX.Element {
 
   return (
     <>
+      <Head>
+        <title>Blog - Danilo Mello - Desenvolvedor Full Stack</title>
+      </Head>
       <HeaderPages />
       <MainPagesSection>
         <BlogPageTitle />

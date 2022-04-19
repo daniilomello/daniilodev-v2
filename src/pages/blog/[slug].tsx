@@ -8,6 +8,7 @@ import { RichText } from 'prismic-dom';
 import styles from '../../styles/post.module.scss';
 import { MainPagesSection } from '../../components/main-pages-section.component';
 import { HeaderPages } from '../../components/header-pages.component';
+import Head from 'next/head';
 
 interface Post {
   id: string;
@@ -32,6 +33,11 @@ export default function BlogArticle({ post }: Posts) {
 
   return (
     <>
+      <Head>
+        <title>
+          Blog - {post.title} - Danilo Mello - Desenvolvedor Full Stack
+        </title>
+      </Head>
       <HeaderPages />
       <MainPagesSection>
         <Link href="/blog">

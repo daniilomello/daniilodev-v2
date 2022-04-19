@@ -11,6 +11,7 @@ import { ArticlesSection } from '../components/articles-section.components';
 import { getPrismicClient } from '../services/prismic.config';
 import { RichText } from 'prismic-dom';
 import { projects } from '../data/projects';
+import Head from 'next/head';
 
 interface Posts {
   id: string;
@@ -41,6 +42,9 @@ interface HomeProps {
 export default function Home({ posts, projectsList }: HomeProps) {
   return (
     <>
+      <Head>
+        <title>Home - Danilo Mello - Desenvolvedor Full Stack</title>
+      </Head>
       <Header />
       <MainSection>
         <AvatarSection />

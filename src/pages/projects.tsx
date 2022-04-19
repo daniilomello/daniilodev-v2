@@ -5,6 +5,7 @@ import { MainPagesSection } from '../components/main-pages-section.component';
 import { HeaderPages } from '../components/header-pages.component';
 import { projects } from '../data/projects';
 import { GetStaticProps } from 'next';
+import Head from 'next/head';
 
 interface ProjectProps {
   projectsList: {
@@ -24,6 +25,9 @@ interface ProjectProps {
 export default function Projects({ projectsList }: ProjectProps) {
   return (
     <>
+      <Head>
+        <title>Projetos - Danilo Mello - Desenvolvedor Full Stack</title>
+      </Head>
       <HeaderPages />
       <MainPagesSection>
         <ProjectsPageTitle />
