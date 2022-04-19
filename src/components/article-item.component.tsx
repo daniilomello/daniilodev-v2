@@ -34,7 +34,7 @@ export function ArticleItem({
           <Image
             src={coverImage}
             boxSize="100%"
-            height="155px"
+            height="190px"
             objectFit="cover"
             alt={title}
             borderRadius="12px"
