@@ -17,7 +17,6 @@ interface Post {
   updatedAt: string;
   cover: string;
   content: string;
-  loom: string;
 }
 
 interface Posts {
@@ -115,7 +114,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
       }
     ),
     cover: response.data.cover.url,
-    loom: response.data.loom.embed_url,
   };
   return {
     props: {
