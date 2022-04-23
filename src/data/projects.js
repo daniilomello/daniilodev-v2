@@ -2,7 +2,8 @@ export const projects = [
   {
     name: 'Spotify Profile',
     tags: 'NodeJS - ReactJS - Spotify API - Styled Components - Heroku',
-    description: 'Site pessoal para exibir meus projetos e conteúdos.',
+    description:
+      'Web app para uma visualização personalizada dos seus dados de uso no Spotify.',
     live: 'https://danlittle-spotify.herokuapp.com/',
     github: 'https://github.com/daniilomello/daniilodev',
     figma: '/',
