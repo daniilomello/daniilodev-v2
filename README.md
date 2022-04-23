@@ -18,8 +18,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 Clone o projeto e acesse a pasta do mesmo.
 
 ```bash
-$ git clone https://github.com/daniilomello/spotify-profile.git
-$ cd spotify-profile
+$ git clone https://github.com/daniilomello/daniilodev.git
+$ cd daniilodev
 ```
 
 Para iniciá-lo, siga os passos abaixo:
