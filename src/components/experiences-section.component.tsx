@@ -17,7 +17,7 @@ export function ExperiencesSection() {
         <CompanyItem
           companyImage="/images/r8.png"
           role="Desenvolvedor Full Stack"
-          companyName="R8 - 2019 - Atualmente"
+          companyName="R8 - 2019 - 2022"
         />
 
         <CompanyItem
