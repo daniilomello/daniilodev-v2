@@ -5,7 +5,6 @@ import {
   Link as ChakraLink,
   Box,
   Text,
-  Image,
   Button,
 } from '@chakra-ui/react';
 import { RiArrowRightUpLine } from 'react-icons/ri';
