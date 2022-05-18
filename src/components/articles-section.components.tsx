@@ -8,7 +8,6 @@ type Post = {
   title: string;
   excerpt: string;
   updatedAt: string;
-  cover: string;
 };
 
 interface ArticlesPostsProps {
@@ -24,7 +23,6 @@ export function ArticlesSection({ posts }: ArticlesPostsProps) {
         {posts.map((post) => (
           <ArticleItem
             key={post.id}
-            coverImage={post.cover}
             date={post.updatedAt}
             readTime={4}
             title={post.title}

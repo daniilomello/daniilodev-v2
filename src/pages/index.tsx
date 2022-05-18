@@ -19,7 +19,6 @@ interface Posts {
   title: string;
   excerpt: string;
   updatedAt: string;
-  cover: string;
 }
 
 interface HomeProps {
@@ -85,7 +84,6 @@ export const getStaticProps: GetStaticProps = async () => {
           year: 'numeric',
         }
       ),
-      cover: post.data.cover.url,
     };
   });
 

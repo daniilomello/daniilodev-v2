@@ -15,7 +15,6 @@ interface Post {
   slug: string;
   title: string;
   updatedAt: string;
-  cover: string;
   content: string;
 }
 
@@ -42,10 +41,7 @@ export default function BlogArticle({ post }: Posts) {
         <Link href="/blog">
           <a>← Voltar</a>
         </Link>
-        <Heading textAlign="center" my={10}>
-          {post.title}
-        </Heading>
-        <Flex justifyContent="space-between" mb={2}>
+        <Flex justifyContent="space-between" mt={8}>
           <Text as="p" color="blue.600">
             {post.updatedAt}
           </Text>
@@ -54,15 +50,9 @@ export default function BlogArticle({ post }: Posts) {
           </Text>
         </Flex>
 
-        <Image
-          src={post.cover}
-          boxSize="100%"
-          height="450px"
-          objectFit="cover"
-          alt={post.title}
-          borderRadius="12px"
-          boxShadow={1}
-        />
+        <Heading textAlign="center" my={10}>
+          {post.title}
+        </Heading>
 
         <article
           className={styles.blogPost}
@@ -113,7 +103,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
         year: 'numeric',
       }
     ),
-    cover: response.data.cover.url,
   };
   return {
     props: {

@@ -11,7 +11,6 @@ import {
 import { RiArrowRightUpLine } from 'react-icons/ri';
 
 interface ArticleItemProps {
-  coverImage: string;
   date: string;
   readTime: number;
   title: string;
@@ -20,7 +19,6 @@ interface ArticleItemProps {
 }
 
 export function ArticleItem({
-  coverImage,
   date,
   title,
   readTime,
@@ -29,19 +27,6 @@ export function ArticleItem({
 }: ArticleItemProps) {
   return (
     <Box p={['4px', '21px']}>
-      <Link href={postLink} passHref={true}>
-        <Box as="a">
-          <Image
-            src={coverImage}
-            boxSize="100%"
-            height="190px"
-            objectFit="cover"
-            alt={title}
-            borderRadius="12px"
-          />
-        </Box>
-      </Link>
-
       <HStack justifyContent="space-between" my="12px">
         <Text as="small" fontSize="12px">
           {date}
