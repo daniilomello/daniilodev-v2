@@ -11,10 +11,7 @@ export function AboutSection() {
       <Text fontSize="18px">
         Desenvolvedor Front-end focado em React, com pouco conhecimento em
         Back-end com Node. Atualmente trabalhando na &nbsp;
-        <Link
-          href="https://agenciar8.com.br/?origin=daniilo.dev"
-          passHref={true}
-        >
+        <Link href="https://t10.digital/?origin=daniilo.dev" passHref={true}>
           <ChakraLink
             as="a"
             rel="nofollow"
@@ -22,7 +19,7 @@ export function AboutSection() {
             color="pink.200"
             fontWeight="bold"
           >
-            @agenciaR8
+            @t10.digital
           </ChakraLink>
         </Link>
         , e desenvolvendo sistema para &nbsp;
