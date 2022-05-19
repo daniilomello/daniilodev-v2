@@ -17,7 +17,6 @@ interface Posts {
   title: string;
   excerpt: string;
   updatedAt: string;
-  cover: string;
 }
 
 interface PostPagination {
@@ -60,7 +59,6 @@ export default function Blog({ postsPagination }: BlogProps): JSX.Element {
             year: 'numeric',
           }
         ),
-        cover: post.data.cover.url,
       };
     });
 
@@ -114,7 +112,6 @@ export const getStaticProps: GetStaticProps = async () => {
           year: 'numeric',
         }
       ),
-      cover: post.data.cover.url,
     };
   });
 
