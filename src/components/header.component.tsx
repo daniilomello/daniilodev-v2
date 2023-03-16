@@ -56,8 +56,14 @@ export function Header() {
               </ChakraLink>
             </Link>
 
-            <Link href="/blog" passHref={true}>
-              <ChakraLink>
+            <Link
+							href="https://danilomello.substack.com/"
+							passHref={true}>
+              <ChakraLink
+								as="a"
+								rel="nofollow"
+								target="_blank"
+								>
                 <Tooltip
                   label="Blog"
                   aria-label="Blog"
