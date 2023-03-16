@@ -11,7 +11,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [Next](https://nextjs.org/)
 - [Typescript](https://www.typescriptlang.org/)
 - [Chakra UI](https://chakra-ui.com/)
-- [Prismic](https://prismic.io/)
 
 ## 🚀 Como executar
 
@@ -23,14 +22,6 @@ $ cd daniilodev
 ```
 
 Para iniciá-lo, siga os passos abaixo:
-
-
-```bash
-# Crie um arquivo .env.local adicione endpoint e access token gerados pelo Prismic.
-PRISMIC_ENDPOINT=
-PRISMIC_ACCESS_TOKEN=
-```
-
 
 ```bash
 # Instalar as dependências
