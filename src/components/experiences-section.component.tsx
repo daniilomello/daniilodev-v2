@@ -16,7 +16,7 @@ export function ExperiencesSection() {
         <CompanyItem
           companyImage="/images/gabarita.png"
           role="Desenvolvedor Front-end"
-          companyName="Gabaritalab - 2021 - Atualmente"
+          companyName="Gabaritalab - 2021 - 2022"
         />
 
         <CompanyItem
